@@ -31,3 +31,9 @@ function App() {
 }
 
 export default App;
+
+
+// install material ui for Icons
+// npm install @material-ui/core
+// npm install @material-ui/icons
+// material-ui.com/components/icons/
