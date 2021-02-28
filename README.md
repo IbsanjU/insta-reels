@@ -1,4 +1,4 @@
-# Click [here](https://ibs-react.web.app/) to see live demo or go to https://ibs-react.web.app/
+## Click [here](https://ibs-react.web.app/) to see live demo or go to https://ibs-react.web.app/
 
 
 <a alt="watch demo video" href="https://youtu.be/0ChrcfW9_K0">
