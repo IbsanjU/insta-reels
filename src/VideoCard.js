@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import './VideoCard.css';
+import VideoHeader from './VideoHeader'
 
 function VideoCard() {
    // useState hook
@@ -22,6 +23,7 @@ function VideoCard() {
 
    return (
       <div className="videoCard">
+         <VideoHeader />
 
          <video
             ref={videoRef}
