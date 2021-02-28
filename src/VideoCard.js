@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react'
 import './VideoCard.css';
 import VideoHeader from './VideoHeader'
+import VideoFooter from './VideoFooter'
 
-function VideoCard() {
+function VideoCard({ channel, url, avatarSrc, song, likes, shares }) {
    // useState hook
    // useRef
 
@@ -29,11 +30,17 @@ function VideoCard() {
             ref={videoRef}
             onClick={onVideoPress}
             className='videoCard__player'
-            src='https://scontent-lga3-1.cdninstagram.com/v/t50.2886-16/10000000_741852866761920_5170221104726327227_n.mp4?_nc_ht=instagram.fblr12-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=vAe9AQEf3j0AX8phtj0&oe=603D7807&oh=829852f07b8ba9627a06c7f8d696fc33&dl=1'
+            src={url}
             alt='insta reel video'
             loop
          />
 
+         <VideoFooter
+            channel={channel}
+            avatarSrc={avatarSrc}
+            song={song}
+            likes={likes}
+            shares={shares} />
       </div>
    )
 }
