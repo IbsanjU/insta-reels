@@ -1,13 +1,33 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import './VideoCard.css';
 
 function VideoCard() {
+   // useState hook
+   // useRef
+
+   const [isVideoPlaying, setIsVideoPlaying] = useState(false); // use a variable in react
+   const videoRef = useRef(null); // poiniting any element on the page // safe to give initial value to null
+
+   const onVideoPress = () => {
+      if (isVideoPlaying) {
+         // stop video
+         videoRef.current.pause();
+         setIsVideoPlaying(false);
+      } else {
+         // play video
+         videoRef.current.play();
+         setIsVideoPlaying(true);
+      }
+   }
+
    return (
       <div className="videoCard">
 
          <video
+            ref={videoRef}
+            onClick={onVideoPress}
             className='videoCard__player'
-            src='https://instagram.fblr4-3.fna.fbcdn.net/v/t50.2886-16/154672544_479475859885940_8073566213492588354_n.mp4?_nc_ht=instagram.fblr4-3.fna.fbcdn.net&_nc_cat=108&_nc_ohc=xgQfFa7Y-mgAX_6RhHt&oe=603BEA53&oh=97f9c8e67adf91d16712222dc4dcf8b0'
+            src='https://scontent-lga3-1.cdninstagram.com/v/t50.2886-16/10000000_741852866761920_5170221104726327227_n.mp4?_nc_ht=instagram.fblr12-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=vAe9AQEf3j0AX8phtj0&oe=603D7807&oh=829852f07b8ba9627a06c7f8d696fc33&dl=1'
             alt='insta reel video'
             loop
          />
