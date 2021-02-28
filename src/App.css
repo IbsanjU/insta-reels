@@ -1,38 +1,58 @@
-.App {
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.app {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.app__top {
+  margin-bottom: -150px;
+}
+
+.app__top > h1 {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app__logo {
+  height: 12vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.app__videos {
+  position: relative;
+  height: 90vh;
+  width: 50%;
+  /* padding-top: 1.8%; */
+  background-color: white;
+  border-radius: 20px;
+
+  /* max-width: 450px;
+  max-height: 1200px; */
+
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* Hide scrollbar for chrome, Safari and Opera */
+.app__videos::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.app__videos {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+@media only screen and (max-width: 600px) {
+  .app__videos {
+    width: 100%;
+    height: 100%;
+    padding-top: 1.8%;
   }
 }
