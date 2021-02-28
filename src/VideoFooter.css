@@ -1,0 +1,75 @@
+.VideoFooter {
+  position: relative;
+  margin-left: 20px;
+  bottom: 100px;
+}
+
+.VideoFooter__text {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.VideoFooter__text > p {
+  margin-left: 10px;
+  padding-bottom: 20px;
+}
+.VideoFooter__text > p > span {
+  margin-left: 5px;
+  font-size: larger;
+}
+
+.VideoFooter__text > p > button {
+  color: white;
+  font-weight: 600;
+  text-transform: inherit;
+}
+
+.VideoFooter__ticker > .ticker {
+  height: fit-content;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  width: 50%;
+  white-space: nowrap;
+}
+
+.VideoFooter__ticker p {
+  padding-top: 7px;
+  font-size: 14px;
+  color: white;
+}
+
+.VideoFooter__icon {
+  position: absolute;
+  left: 5px;
+  color: white;
+  font-size: larger;
+}
+
+.VideoFooter__actions {
+  display: flex;
+  position: absolute;
+  width: 95%;
+  color: white;
+  justify-content: space-between;
+}
+
+.VideoFooter__actionsLeft > .MuiSvgIcon-root {
+  padding: 0 10px;
+}
+
+.VideoFooter__actionsRight {
+  display: flex;
+}
+
+.VideoFooter__stat {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.VideoFooter__stat > p {
+  margin-left: 3px;
+}
